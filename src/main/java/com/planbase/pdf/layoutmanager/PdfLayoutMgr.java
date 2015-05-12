@@ -903,4 +903,16 @@ public class PdfLayoutMgr {
         return sB.toString();
     }
 
+    /**
+     * Frees up the resources used by this manager
+     * 
+     * No further calls can be made to this instance, after this call has been made
+     */
+    public void close() {
+    	try {
+    		doc.close();
+    	} catch (Exception e) {
+    		// We will silently ignore any errors during closure
+    	}
+    }
 }

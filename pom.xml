@@ -12,7 +12,7 @@ http://central.sonatype.org/pages/apache-maven.html
 -->
 	<groupId>com.planbase.pdf</groupId>
 	<artifactId>PdfLayoutManager</artifactId>
-	<version>0.3.1-SNAPSHOT</version>
+	<version>0.3.1</version>
 	<packaging>jar</packaging>
 
 	<name>PdfLayoutManager</name>

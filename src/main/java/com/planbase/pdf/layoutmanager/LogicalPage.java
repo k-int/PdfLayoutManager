@@ -24,17 +24,13 @@ public class LogicalPage { // AKA Document Section
     boolean valid = true;
 
     /** The Y-value for the top margin of the page (in document units) */
-    @SuppressWarnings("UnusedDeclaration") // Part of end-user public interface
     public float yPageTop() { return 755; }
     /** The Y-value for the bottom margin of the page (in document units) */
-    @SuppressWarnings("UnusedDeclaration") // Part of end-user public interface
     public float yPageBottom() { return portrait ? 0 : 230; }
 
     /** Height of the printable area (in document units) */
-    @SuppressWarnings("UnusedDeclaration") // Part of end-user public interface
     public float printAreaHeight() { return yPageTop() - yPageBottom(); }
     /** Width of the printable area (in document units) */
-    @SuppressWarnings("UnusedDeclaration") // Part of end-user public interface
     public float pageWidth() {
         return portrait ? PDPage.PAGE_SIZE_LETTER.getWidth()
                 : PDPage.PAGE_SIZE_LETTER.getHeight();
@@ -279,7 +275,6 @@ public class LogicalPage { // AKA Document Section
      @param cell the cell containing the styling and text to render.
      @return the bottom Y-value of the rendered cell (on all pages).
      */
-    @SuppressWarnings("UnusedDeclaration") // Part of end-user public interface
     public float putCellAsHeaderFooter(final float x, float origY, final Cell cell) {
         if (!valid) { throw new IllegalStateException("Logical page accessed after commit"); }
         float outerWidth = cell.width();

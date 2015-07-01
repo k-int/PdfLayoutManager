@@ -57,15 +57,14 @@ public class BorderStyle {
             if (bs != null) { top = bs.top; right = bs.right; bottom = bs.bottom; left = bs.left; }
         }
 
-        @SuppressWarnings("UnusedDeclaration") // Part of end-user public interface
         public Builder top(LineStyle ls) { top = ls; return this; }
         public Builder right(LineStyle ls) { right = ls; return this; }
         public Builder bottom(LineStyle ls) { bottom = ls; return this; }
         public Builder left(LineStyle ls) { left = ls; return this; }
 
         /** Sets top, right, bottom, and left color */
-        @SuppressWarnings("UnusedDeclaration") // Part of end-user public interface
-        private Builder color(Color c) {
+        @SuppressWarnings("unused")
+		private Builder color(Color c) {
             if (top == null) {
                 top = LineStyle.of(c);
             } else if (!Utils.equals(top.color(), c)) {
@@ -99,7 +98,6 @@ public class BorderStyle {
 //        }
 
         /** Call this to make an immutable BorderStyle object based on your settings. */
-        @SuppressWarnings("UnusedDeclaration") // Part of end-user public interface
         public BorderStyle build() {
             return new BorderStyle(this);
         }
@@ -144,7 +142,6 @@ public class BorderStyle {
     }
 
     /** Returns a mutable helper class for building an immutable BorderStyle object. */
-    @SuppressWarnings("UnusedDeclaration") // Part of end-user public interface
     public static Builder builder() { return new Builder(null); }
 
     public LineStyle top() { return top; }

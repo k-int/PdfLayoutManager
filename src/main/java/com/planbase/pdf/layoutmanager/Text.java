@@ -30,7 +30,8 @@ public class Text implements Renderable {
 
     private static class WrappedRow {
         String string;
-        XyDim rowDim;
+        @SuppressWarnings("unused")
+		XyDim rowDim;
         public static WrappedRow of(String s, float x, float y) {
             WrappedRow wr = new WrappedRow();
             wr.string = s;

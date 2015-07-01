@@ -374,7 +374,6 @@ public class PdfLayoutMgr {
      @return a new Page Manager with an RGB color space
      @throws IOException
      */
-    @SuppressWarnings("UnusedDeclaration") // Part of end-user public interface
     public static PdfLayoutMgr newRgbPageMgr() throws IOException {
         return new PdfLayoutMgr(PDDeviceRGB.INSTANCE);
     }
@@ -418,7 +417,6 @@ public class PdfLayoutMgr {
      Tells this PdfLayoutMgr that you want to start a new logical page (which may be broken across
      two or more physical pages) in the requested page orientation.
      */
-    @SuppressWarnings("UnusedDeclaration") // Part of end-user public interface
     public LogicalPage logicalPageStart(LogicalPage.Orientation o) {
         PageBuffer pb = new PageBuffer(pages.size() + 1);
         pages.add(pb);
@@ -443,7 +441,6 @@ public class PdfLayoutMgr {
 
      @throws IOException - if there is a failure writing to the underlying stream.
      */
-    @SuppressWarnings("UnusedDeclaration") // Part of end-user public interface
     void logicalPageEnd(LogicalPage lp) throws IOException {
 
         // Write out all uncommitted pages.

@@ -36,7 +36,8 @@ public class Cell implements Renderable {
     private final Map<Float,PreCalcRows> preCalcRows = new HashMap<Float,PreCalcRows>(0);
 
     private static class PreCalcRow {
-        Renderable row;
+        @SuppressWarnings("unused")
+		Renderable row;
         XyDim blockDim;
         public static PreCalcRow of(Renderable r, XyDim d) {
             PreCalcRow pcr = new PreCalcRow(); pcr.row = r; pcr.blockDim = d; return pcr;
